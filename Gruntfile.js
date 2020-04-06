@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         webpack: {
             all:{
                 devtool: 'source-map',
-                entry: './index',
+                entry: './src/index',
                 output: {
                     path:"dist/",
                     filename:"index.js",

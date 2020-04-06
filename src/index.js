@@ -3,10 +3,14 @@ import {h, Component} from "preact";
 const _ = require('lodash');
 const $ = require('jquery');
 
-export default class HoverBox extends Component {
-    state = {
-        hover: false,
-    };
+class HoverBox extends Component {
+    constructor() {
+        super();
+        this.state = {
+            hover: false,
+        };
+        this.displayName = 'HoverBox';
+    }
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
         return !_.isEqual(nextProps, this.props) || !_.isEqual(nextState, this.state) || !_.isEqual(nextContext, this.context);
@@ -43,8 +47,6 @@ export default class HoverBox extends Component {
         }, 1);
     }
 
-    displayName = 'HoverBox';
-
     render() {
         return (
             <div className={this.state.hover ? 'hover' : 'not-hover'} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} onMouseOver={this.onMouseOver} style={this.props.style}>
@@ -71,3 +73,5 @@ export default class HoverBox extends Component {
         }
     }
 }
+
+export default HoverBox;
