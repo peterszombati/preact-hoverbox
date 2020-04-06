@@ -1,11 +1,11 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+var React = require('preact');
+var ReactDOM = require('preact-compat');
 var _ = require('lodash');
 var $ = require('jquery');
-var createReactClass = require('create-react-class');
+import { createClass } from 'preact-compat/dist/preact-compat.min'
 var PropTypes = require('prop-types');
 
-module.exports = createReactClass({
+module.exports = createClass({
     propTypes: {
         render: PropTypes.func,
     },

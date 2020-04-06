@@ -1,7 +1,7 @@
 {
-  "name": "react-hoverbox",
-  "version": "1.0.0",
-  "description": "ReactJS Component that knows when it's hovered over",
+  "name": "preact-hoverbox",
+  "version": "1.0.1",
+  "description": "Preact Component that knows when it's hovered over",
   "main": "dist/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel/register",
@@ -11,9 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wix/react-hoverbox.git"
+    "url": "https://github.com/peterszombati/preact-hoverbox.git"
   },
   "keywords": [
+    "preact",
     "react",
     "reactjs",
     "hover",
@@ -23,11 +24,12 @@
   "author": "Wix Restaurants",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wix/react-hoverbox/issues"
+    "url": "https://github.com/peterszombati/preact-hoverbox/issues"
   },
-  "homepage": "https://github.com/wix/react-hoverbox",
+  "homepage": "https://github.com/peterszombati/preact-hoverbox",
   "dependencies": {
-    "create-react-class": "^15.6.3",
+    "preact": "^10.3.4",
+    "preact-compat": "^3.19.0",
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
