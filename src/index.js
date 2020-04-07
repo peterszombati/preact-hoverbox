@@ -1,7 +1,6 @@
 import {h, Component} from "preact";
-
-const _ = require('lodash');
-const $ = require('jquery');
+import * as _ from 'lodash';
+import * as $ from 'jquery';
 
 class HoverBox extends Component {
     constructor() {
@@ -47,14 +46,6 @@ class HoverBox extends Component {
         }, 1);
     }
 
-    render() {
-        return (
-            <div className={this.state.hover ? 'hover' : 'not-hover'} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} onMouseOver={this.onMouseOver} style={this.props.style}>
-                {this.props.render(this.state.hover)}
-            </div>
-        );
-    }
-
     onMouseEnter() {
         if (this.state.hover === false) {
             this.setState({hover: true});
@@ -71,6 +62,14 @@ class HoverBox extends Component {
         if (this.state.hover === true) {
             this.setState({hover: false});
         }
+    }
+
+    render() {
+        return (
+            <div className={this.state.hover ? 'hover' : 'not-hover'} onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} onMouseOver={this.onMouseOver} style={this.props.style}>
+                {this.props.render(this.state.hover)}
+            </div>
+        );
     }
 }
 
